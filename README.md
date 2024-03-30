@@ -13,11 +13,11 @@ This section provides links to additional resources that can help in understandi
 
 ### Datasheet
 
-- [ST95P08 EEPROM Chip Datasheet]([[https://www.example.com/datasheet](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF)](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF): This datasheet provides comprehensive details on the specifications, pinout, and communication protocols of the ST95P08 EEPROM chip, essential for proper interfacing and utilization.
+- [ST95P08 EEPROM Chip Datasheet]([[(https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF)](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF): This datasheet provides comprehensive details on the specifications, pinout, and communication protocols of the ST95P08 EEPROM chip, essential for proper interfacing and utilization.
 
 ### Installation Guides
 
-- [Emulator Installation Process for Mercedes Benz Sprinter W903]([[https://www.example.com/installation-guide](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF)](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/CR2.pdf): A step-by-step guide to installing the immobilizer emulator in a Mercedes Benz Sprinter W903 ECU, including necessary precautions and setup instructions.
+- [Emulator Installation Process for Mercedes Benz Sprinter W903]([[https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/ST95P08.PDF)](https://github.com/slexs/Mercedes-Benz-W903-Immobilizer-Emulator/blob/main/CR2.pdf): A step-by-step guide to installing the immobilizer emulator in a Mercedes Benz Sprinter W903 ECU, including necessary precautions and setup instructions.
 
 Please ensure to review these resources for a deeper understanding of the project components and installation procedures.
 
