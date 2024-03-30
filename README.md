@@ -1,7 +1,7 @@
 # Case
 The immobilizer in a Mercedes-Benz is an anti-theft system that prevents the vehicle from starting without the correct key. It does this by communicating with various parts of the vehicle, including the ignition switch, the ECU (Engine Control Unit), and the key itself. If the immobilizer doesn’t recognize the key, it will prevent the vehicle from starting.
 
-One way to circumvent immobilizer problems is to install an immobilizer emulator. An emulator like the Julie Mercedes Emulator is designed to replace the immobilizer signal in Mercedes vehicles. It supports various ECUs with CAN transmission, including several models of Mercedes Sprinter5. However, installing an immobilizer emulator should be done by a professional to ensure it’s done correctly and safely. Always consult with a professional if you’re unsure.
+One way to circumvent immobilizer problems is to install an immobilizer emulator. An emulator like the Julie Mercedes Emulator is designed to replace the immobilizer signal in Mercedes vehicles. It supports various ECUs with CAN transmission, including several models of Mercedes Sprinter. However, installing an immobilizer emulator should be done by a professional to ensure it’s done correctly and safely. Always consult with a professional if you’re unsure.
 
 Please note that bypassing the immobilizer system might have legal implications depending on your location. Always check local laws and regulations before proceeding.
 
