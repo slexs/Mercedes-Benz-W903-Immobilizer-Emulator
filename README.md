@@ -46,32 +46,41 @@ Please ensure to review these resources for a deeper understanding of the projec
 
 ## Program Description
 
-### Constants
+This section details the core functions of the sketch, designed to interface with the ST95P08C3 EEPROM chip. These functions provide the capabilities to write data to specified EEPROM addresses, verify written data by reading from these addresses, and create a backup of all OEM data by reading the entire EEPROM.
 
-- `CS_PIN`, `MOSI_PIN`, `MISO_PIN`, `SCK_PIN`, `W_PIN`, `HOLD_PIN`: Pin assignments for interfacing with the EEPROM.
+### Core Functions
 
-### `setup()`
+#### `pageWriteEEPROM(unsigned int startAddress, byte* data, byte length)`
 
-Initializes the SPI communication and configures the pins for their respective roles. The SPI bus is configured for a clock speed of 2 MHz, MSB first, and SPI Mode 0, suitable for the ST95P08C3 EEPROM. Write protection is enabled by default to allow only read operations, ensuring the EEPROM's data remains unaltered.
-
-### `loop()`
-
-The loop function is empty, as we only want to do the write and read once, it is done in the setup() function. 
-
-### `readEEPROM(unsigned int address)`
-
-- **Parameters**: `address` - The EEPROM address from which to read.
-- **Returns**: The byte read from the specified EEPROM address.
-
-This function encapsulates the process of reading a single byte from the EEPROM, using the SPI `transfer` method to send the READ instruction followed by the address.
-
-### `writeEEPROM(unsigned int address, byte data)`
-
+- **Purpose**: Writes an array of bytes to the EEPROM starting at a specified address.
 - **Parameters**:
-  - `address` - The EEPROM address at which to write.
-  - `data` - The byte to write to the specified EEPROM address.
+  - `startAddress`: The starting address in the EEPROM where the data writing begins.
+  - `data`: Pointer to the array of bytes to be written.
+  - `length`: The number of bytes to write.
+- **Operation**: This function enables writing to the EEPROM by first sending a WRITE command, followed by the address and the data bytes. It ensures the EEPROM is write-enabled before initiating the write process and waits for the write operation to complete.
 
-This function demonstrates how to write a byte to the EEPROM, although it is not utilized in the main loop to preserve data integrity. It sends the WRITE instruction followed by the address and data byte. The function includes a delay to respect the EEPROM's write cycle time; this delay may need adjustment depending on the specific EEPROM used.
+#### `readEEPROMPage(unsigned int startAddress, byte* buffer, byte length)`
+
+- **Purpose**: Reads a sequence of bytes from the EEPROM starting at a specified address into a buffer.
+- **Parameters**:
+  - `startAddress`: The starting address in the EEPROM from which to begin reading.
+  - `buffer`: Pointer to the buffer where the read data will be stored.
+  - `length`: The number of bytes to read.
+- **Operation**: Initiates a READ command to the EEPROM, sequentially reads the specified number of bytes from the starting address, and stores them in the provided buffer. Useful for verifying data written to the EEPROM.
+
+#### `readEEPROMAll()`
+
+- **Purpose**: Reads all the data from the EEPROM and prints it to the Serial Monitor, useful for creating a backup of the OEM data.
+- **Operation**: Iterates over the entire memory space of the EEPROM, reading in page-sized chunks. Each byte read is printed to the Serial Monitor, allowing for a complete backup of the EEPROM's contents before making any modifications.
+
+### Usage Scenario
+
+1. **Backup OEM Data**: Start with `readEEPROMAll()` to create a backup of the existing EEPROM data.
+2. **Write Data**: Use `pageWriteEEPROM()` to write new data to specific EEPROM addresses.
+3. **Verify Write Operation**: Employ `readEEPROMPage()` to read back and verify the data written to the EEPROM.
+
+These functions collectively offer a comprehensive toolset for EEPROM data management, catering to the essential requirements of modifying EEPROM contents while ensuring data integrity and safety.
+
 
 ## Safety and Compliance
 
